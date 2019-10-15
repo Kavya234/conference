@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+   <head>
+
+          <link rel="stylesheet" href="style.css">
+   </head>
+<body ng-app="myApp" ng-controller="customersCtrl">
+<!--
+<div ng-app="myApp" ng-controller="customersCtrl">
+    <ul>
+      <li ng-repeat="x in myData">
+        {{ x.city + ', ' + x.country }}
+      </li>
+    </ul>
+</div>
+-->
+<!-- header -->
+  <header>
+    <div class="">
+      <input type="text" name="" value="" placeholder="Search" ng-model="Search">
+    </div>
+  </header>
+  <!-- filtering -->
+  <section class="sort">
+    <div class="filter">
+      <div class="">
+        <label for="">City:</label>
+      </div>
+      <div class="">
+        <select class="" name="" ng-model="Search.city">
+          <option value="">NONE</option>
+          <option value="Paris" >Paris</option>
+        </select>
+      </div>
+    </div>
+    <div class="filter">
+      <div class="">
+        <label for="">Month</label>
+      </div>
+      <div class="">
+        <select class="" name="" ng-model="Search.confStartDate">
+          <option value="">NONE</option>
+          <option value="Jan" >Janaury</option>
+          <option value="Feb" >February</option>
+          <option value="Mar" >March</option>
+          <option value="Apr" >April</option>
+          <option value="May" >May</option>
+          <option value="Jun" >June</option>
+          <option value="Jul" >July</option>
+          <option value="Aug" >August</option>
+          <option value="Sep" >September</option>
+          <option value="Oct" >October</option>
+          <option value="Nov" >November</option>
+          <option value="Dec" >December</option>
+        </select>
+      </div>
+    </div>
+    <div class="filter">
+      <div class="">
+        <label for="">Fee:</label>
+      </div>
+      <div class="">
+        <select class="" name="" ng-model="fee">
+          <option value="">NONE</option>
+          <option value="Free" >Free</option>
+          <option value="Paid" >Paid</option>
+        </select>
+      </div>
+    </div>
+    <div class="filter">
+      <div class="">
+        <label for="">Country</label>
+      </div>
+      <div class="">
+        <!-- <input type="text" name="" value="" ng-model=""> -->
+        <select class="" name="" ng-model="Search.country">
+          <option value="">NONE</option>
+          <option value="USA" >USA</option>
+        </select>
+      </div>
+    </div>
+
+  </section>
+  <!-- show details -->
+  <section class="cards">
+    <div class="card" ng-repeat="x in myData | filter:Search">
+      <div class="" >
+        <img ng-src="{{x.imageURL}}" alt="" height="200">
+        <span ng-if="x.entryType=='Paid'">PAID</span>
+        <span ng-if="x.entryType=='Free'">FREE</span>
+      </div>
+
+      <div class="con-det" style="">
+        <h2>{{x.confName}}</h2>
+        <h3>{{x.city}},{{x.country}}</h3>
+        
+        <h6>START DATE: {{x.confStartDate}}</h6>
+        <h6> END DATE : {{x.confEndDate}}</h6>
+
+      </div>
+      <div class="con-link" style="">
+        <a ng-href="{{x.confUrl}}">CLICK HERE</a>
+      </div>
+    </div>
+
+  </section>
+
+
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

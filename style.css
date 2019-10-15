@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap');
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+}
+/* Search button style */
+header{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-color: #001f3f;
+  padding: 10px;
+  box-sizing: border-box;
+}
+header div{
+  padding-right: 20px;
+}
+header div input{
+  border: 0;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid #0074D9;
+}
+/* sorting style */
+.sort{
+  display: flex;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0px -1px 6px black;
+}
+.filter{
+  display: flex;
+}
+.filter{
+  width: 25%;
+}
+.filter div{
+  width: 50%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+/* styling the select type */
+.filter div select{
+  width: 90%;
+  padding: 5px;
+  border-radius: 15px;
+  border: 1px solid silver;
+  color: grey;
+  font-family: 'Montserrat', sans-serif;
+
+}
+.filter div select:focus{
+  border: 1px solid #0074D9;
+  width: 95 %;
+}
+/* styling the label */
+.filter div label{
+  font-size: 1.2em;
+  color: grey;
+  font-family: 'Montserrat', sans-serif;
+}
+/* styling the cards */
+.cards{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+  margin-top: 50px;
+  box-sizing: border-box;
+}
+.card{
+  display: flex;
+  width: 23%;
+  flex-direction:column;
+  position: relative;
+  border-radius: 20px;
+  margin-left: 2%;
+  margin-top: 10px;
+  overflow: hidden;
+  border: 1px solid silver;
+  /* box-shadow: 0px -1px 3px black; */
+  box-sizing: border-box;
+}
+.card div img{
+  width: 100%;
+  z-index: 0; 
+}
+.card div span{
+  position: absolute;
+  top: 10%;
+  background-color: red;
+  padding: 5px;
+  z-index: 5;
+  color: white;
+}
+.card div h2{
+  font-size: 1em;
+  font-weight: normal;
+  color: #001f3f;
+}
+.card div h3{
+  font-size: 0.8em;
+  color: grey;
+  font-weight: normal;
+  /* display: inline; */
+}
+.card div h6{
+  display: inline-block;
+  font-size: .6em;
+  background-color: #f4f4f4;
+  padding: 5px;
+  border-radius: 5px;
+  color: grey;
+}
+.con-det{
+  padding: 15px;
+}
+.con-det h3{
+  margin-top: 10px;
+}
+.con-det h6{
+  margin-top: 5px;
+}
+.con-link{
+  text-align: center;
+  background-color: #001f3f;
+  padding: 10px;
+}
+.con-link a{
+  text-decoration: none;
+  color: white;
+}
